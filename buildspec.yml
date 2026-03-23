@@ -13,6 +13,6 @@ phases:
     commands:
       - echo "Connecting to EC2"
       - ssh ec2-user@<EC2-IP> "sudo yum install -y httpd"
-      - scp index.html ec2-user@<EC2-IP>:/home/ec2-user/
+      - scp index.html ec2-user@98.89.37.59:/home/ec2-user/
       - ssh ec2-user@<EC2-IP> "sudo mv /home/ec2-user/index.html /var/www/html/index.html"
       - ssh ec2-user@<EC2-IP> "sudo systemctl start httpd"
