@@ -1,16 +1,16 @@
-
 version: 0.2
 
 phases:
   install:
     commands:
-      - echo "Starting build"
+      - echo "Install phase"
 
   build:
     commands:
-      - echo "Preparing artifacts"
+      - echo "Build phase"
+      - ls -R   # DEBUG (VERY IMPORTANT)
 
 artifacts:
   files:
-    - index.html
-    - appspec.yml
+    - '**/*'
+  discard-paths: no
